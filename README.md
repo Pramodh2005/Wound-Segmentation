@@ -1,33 +1,96 @@
-An IoT-Based System for Comprehensive Patient Medication Monitoring
-This project provides a simple, cost-effective IoT-based solution designed to help patients adhere to their daily medication schedule. It is particularly useful for elderly and chronically ill individuals who may forget or miss their doses. The system is built using the Arduino Uno and integrates components like DS3231 RTC, ultrasonic sensor, 16x2 I2C LCD, LED indicators, and a buzzer to deliver timely alerts and ensure accurate intake verification.
+A ConvNeXt–U-Net Architecture with Multi-Head Self-Attention for Automated Wound Segmentation
+
+This project presents a deep learning–based automated wound segmentation system designed to accurately identify wound regions from medical images. The proposed model combines a ConvNeXt encoder, Multi-Head Self-Attention (MHSA) module, and U-Net decoder to improve feature extraction, capture global contextual information, and generate precise segmentation masks.
+
+The system is mainly focused on diabetic foot ulcer and chronic wound segmentation, helping in automated wound assessment, treatment planning, and healing monitoring. The proposed architecture improves wound boundary detection and achieves strong segmentation performance using Dice Score and IoU metrics.
 
 💡 Features
-⏰ Time-Based Alerts: Uses a Real-Time Clock (RTC) to track medication times and activate reminders accordingly.
-🔔 Visual and Audio Notification: Alerts patients with buzzer sound, LED indicator, and LCD messages when it’s time to take medication.
-🤖 User Interaction Detection: Ultrasonic sensor detects when the box is opened, confirming user response.
-🔁 Automatic Reset: Once the medication is taken, the system resets and waits for the next scheduled dose.
-⚙️ Offline and Standalone: No Wi-Fi or remote monitoring needed; fully functional as an independent system.
-🛠️ Hardware Requirements
-Arduino Uno
-DS3231 RTC Module
-16x2 I2C LCD Display
-Ultrasonic Sensor (HC-SR04)
-LEDs (for slot indication)
-Buzzer
-Push Buttons (optional for manual override)
-Jumper Wires and Breadboard
-Power Supply
-🧠 Software Implementation
-Code written in Embedded C/C++ using the Arduino IDE
-Real-time clock integration for scheduled checks
-Event-driven logic to activate and reset alerts
-Infinite loop structure for continuous monitoring
-📚 How It Works
-System checks the current time using RTC.
-If it matches the stored medication schedule:
-Activates LED, buzzer, and LCD alert.
-Waits for the box to open (via ultrasonic sensor).
-If box opened:
-Deactivates alerts and resets for next dose.
+
+🩹 Automated Wound Segmentation
+Accurately detects and segments wound regions from medical images.
+
+🧠 ConvNeXt Encoder
+Extracts hierarchical low-level and high-level wound features efficiently.
+
+🌐 Multi-Head Self-Attention (MHSA)
+Captures global contextual relationships and long-range dependencies for better wound localization.
+
+🔄 U-Net Decoder with Skip Connections
+Reconstructs high-resolution segmentation masks while preserving spatial information.
+
+📈 Improved Boundary Detection
+Handles irregular wound boundaries and complex textures effectively.
+
+📊 Performance Evaluation
+Evaluated using Dice Score and Intersection over Union (IoU) metrics.
+
+🛠️ Technologies & Tools Used
+Python
+PyTorch
+OpenCV
+NumPy
+Matplotlib
+Scikit-learn
+Kaggle Notebook / Google Colab
+🧠 Model Architecture
+
+The proposed architecture consists of:
+
+1. ConvNeXt Encoder
+Extracts hierarchical wound features
+Captures edges, textures, and semantic information
+2. Multi-Head Self-Attention (MHSA)
+Captures global contextual information
+Learns long-range dependencies between wound regions
+3. U-Net Decoder
+Performs upsampling and reconstruction
+Uses skip connections for accurate spatial recovery
+📂 Dataset
+
+The dataset contains:
+
+RGB wound images
+Corresponding binary segmentation masks
+Dataset Preprocessing
+Resize images to 512×512
+Image normalization
+Data augmentation:
+Flipping
+Rotation
+Brightness adjustment
+Contrast enhancement
+Dataset Split
+Training Set → 80%
+Validation Set → 10%
+Testing Set → 10%
+⚙️ Software Implementation
+Developed using PyTorch
+ConvNeXt Tiny used as encoder backbone
+MHSA integrated for global feature learning
+BCE + Dice Loss used for training
+Trained and evaluated on wound image dataset
+📚 Workflow
+Input wound image is preprocessed.
+ConvNeXt encoder extracts hierarchical feature maps.
+MHSA module captures global contextual relationships.
+U-Net decoder reconstructs segmentation masks.
+Final binary wound mask is generated.
+Performance evaluated using Dice and IoU metrics.
+📊 Results
+Model	Dice Score (%)	IoU (%)
+ConvNeXt U-Net + MHSA	88.00	80.10
+ConvNeXt U-Net	87.88	79.63
+ConvNeXt	87.70	79.33
+Key Observations
+Improved wound boundary detection
+Better segmentation accuracy
+Strong performance on complex wound images
+Effective handling of irregular wound regions
+🚀 Future Work
+Train using larger and more diverse wound datasets
+Extend system for wound tissue classification
+Develop mobile-based real-time wound assessment system
+Integrate wound healing progression monitoring
 📎 Conclusion
-This project proves that even simple embedded systems can play a significant role in healthcare by improving medication adherence, minimizing supervision, and offering an accessible solution for daily medicine tracking.
+
+The proposed ConvNeXt–U-Net architecture integrated with Multi-Head Self-Attention (MHSA) provides an effective solution for automated wound segmentation. The combination of advanced feature extraction, global contextual learning, and accurate mask reconstruction significantly improves segmentation accuracy and wound boundary detection. The model demonstrates strong potential for real-world clinical wound assessment and healthcare applications.
