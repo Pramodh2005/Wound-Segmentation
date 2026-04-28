@@ -120,13 +120,6 @@ The dataset contains:
 
 The proposed ConvNeXt–U-Net architecture integrated with Multi-Head Self-Attention (MHSA) provides an effective solution for automated wound segmentation. The combination of advanced feature extraction, global contextual learning, and accurate mask reconstruction significantly improves segmentation accuracy and wound boundary detection.
 
----
 
-# 👨‍💻 Authors
 
-- G. Sai Pramodh
-- N. Meher Rishi
-- V. John Priyatham
 
-Department of Electronics and Communication Engineering  
-Velagapudi Ramakrishna Siddhartha Engineering College
