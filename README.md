@@ -77,20 +77,22 @@ U-Net decoder reconstructs segmentation masks.
 Final binary wound mask is generated.
 Performance evaluated using Dice and IoU metrics.
 📊 Results
-Model	Dice Score (%)	IoU (%)
-ConvNeXt U-Net + MHSA	88.00	80.10
-ConvNeXt U-Net	87.88	79.63
-ConvNeXt	87.70	79.33
+Model	                Dice Score (%)	IoU (%)
+ConvNeXt U-Net + MHSA	88.00	          80.10
+ConvNeXt U-Net	      87.88	          79.63
+ConvNeXt	            87.70	          79.33
+
 Key Observations
 Improved wound boundary detection
 Better segmentation accuracy
 Strong performance on complex wound images
 Effective handling of irregular wound regions
+
 🚀 Future Work
 Train using larger and more diverse wound datasets
 Extend system for wound tissue classification
 Develop mobile-based real-time wound assessment system
 Integrate wound healing progression monitoring
-📎 Conclusion
 
+📎 Conclusion
 The proposed ConvNeXt–U-Net architecture integrated with Multi-Head Self-Attention (MHSA) provides an effective solution for automated wound segmentation. The combination of advanced feature extraction, global contextual learning, and accurate mask reconstruction significantly improves segmentation accuracy and wound boundary detection. The model demonstrates strong potential for real-world clinical wound assessment and healthcare applications.
